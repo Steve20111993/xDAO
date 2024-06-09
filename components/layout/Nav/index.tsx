@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import NavLink from "next/link";
 import { Button } from "@heathmont/moon-core-tw";
 import { SoftwareLogOut } from "@heathmont/moon-icons-tw";
-import isServer from "../../../components/isServer";
+import useContract from "../../../services/useContract";
 import { useXRPLContext } from "../../../contexts/XRPLContext";
 declare let window: any;
 let running = false;
 export function Nav(): JSX.Element {
 
   const { XrplWalletAddress,BalanceXRPL,client} = useXRPLContext();
+  const {contract} = useContract();
   const [acc, setAcc] = useState('');
   const [Balance, setBalance] = useState("");
   const [count, setCount] = useState(0);
@@ -96,7 +97,7 @@ export function Nav(): JSX.Element {
   }
   useEffect(() => {
     fetchInfo();
-  }, [XrplWalletAddress]);
+  }, [XrplWalletAddress,contract]);
 
 
 
