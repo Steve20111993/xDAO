@@ -12,6 +12,7 @@
     "deploy": "cd contracts && hardhat deploy --network xrpl"
   },
   "dependencies": {
+    "@crossmarkio/sdk": "^0.3.9",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@heathmont/moon-components": "^9.7.1",
@@ -24,6 +25,7 @@
     "@heathmont/moon-themes-tw": "^9.7.1",
     "@mui/lab": "^5.0.0-alpha.111",
     "@mui/material": "^5.10.17",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "@openzeppelin/contracts": "^4.8.0",
     "@truffle/hdwallet-provider": "^2.1.15",
@@ -57,8 +59,7 @@
     "styled-components": "^5.3.5",
     "web3": "^1.10.0",
     "xchain-sdk": "^1.2.5",
-    "xrpl-client": "^2.4.0",
-    "xumm": "^1.7.7"
+    "xrpl-client": "^2.4.0"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",

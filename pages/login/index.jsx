@@ -12,7 +12,7 @@ let redirecting = "";
 export default function Login() {
   const [ConnectStatusXRPL, setConnectStatusXRPL] = useState(false);
   const [ConnectStatusMetamask, setConnectStatusMetamask] = useState(false);
-  const { ConnectXummXrpl, XrplWalletAddress } = useXRPLContext()
+  const { ConnectCrossMarkXrpl, XrplWalletAddress } = useXRPLContext()
 
   if (!isServer()) {
     const regex = /\[(.*)\]/g;
@@ -59,7 +59,7 @@ export default function Login() {
   if (isServer()) return null;
 
 
-  function XamanWallet() {
+  function CrossMarkWallet() {
     
     if (!ConnectStatusXRPL) {
       return (
@@ -69,10 +69,10 @@ export default function Login() {
               style={{ height: 80, width: 80, border: "1px solid #EBEBEB" }}
               className="p-4 rounded-xl"
             >
-                <img src="https://pbs.twimg.com/profile_images/1620905062007554050/EyxZn4XF_400x400.jpg" />
+                <img src="https://docs.crossmark.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.296017e6.png&w=1920&q=75" />
             </div>
             <div className="flex flex-1 flex-col">
-              <span className="font-bold">Xaman wallet</span>
+              <span className="font-bold">CrossMark wallet</span>
               <span
                 className="flex items-center gap-1 " style={{ color: 'rgb(255, 78, 100)' }}
               >
@@ -97,10 +97,10 @@ export default function Login() {
               style={{ height: 80, width: 80, border: "1px solid #EBEBEB" }}
               className="p-4 rounded-xl"
             >
-                 <img src="https://pbs.twimg.com/profile_images/1620905062007554050/EyxZn4XF_400x400.jpg" />
+                 <img src="https://docs.crossmark.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.296017e6.png&w=1920&q=75" />
             </div>
             <div className="flex flex-1 flex-col">
-              <span className="font-bold">Xaman wallet</span>
+              <span className="font-bold">CrossMark wallet</span>
               <span
                 className="flex items-center gap-1"
                 style={{ color: "#40A69F" }}
@@ -124,9 +124,10 @@ export default function Login() {
       );
     }
   }
+
   async function onClickConnectXrpl() {
   
-    await ConnectXummXrpl();
+    await ConnectCrossMarkXrpl();
     if (XrplWalletAddress != null) {
       window.localStorage.setItem('loggedin', 'true')
       window.localStorage.setItem('login-type', "xrpl");
@@ -271,6 +272,7 @@ export default function Login() {
   async function onClickDisConnect() {
     window.localStorage.setItem('loggedin', 'false')
     window.localStorage.setItem('login-type', "");
+
   }
 
 
@@ -285,11 +287,11 @@ export default function Login() {
       <div className={`${styles.container} flex items-center flex-col gap-8`}>
         <div className={`${styles.title}  flex flex-col`}>
           <h1 className="text-moon-32  font-bold">Login to your account</h1>
-          <p className="text-trunks mt-4">Please connect to Xaman XRPL wallet or Metamask Wallet in order to login.</p>
+          <p className="text-trunks mt-4">Please connect to CrossMark XRPL wallet or Metamask Wallet in order to login.</p>
         </div>
         <div className={styles.divider}></div>
         <div className={`${styles.title} flex flex-col items-center gap-8 `}>
-          <XamanWallet />
+          <CrossMarkWallet />
           <MetamaskWallet />
         </div>
 

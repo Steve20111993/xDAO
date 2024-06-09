@@ -17,7 +17,7 @@ export default function CreateDao() {
   const [DaoImage, setDaoImage] = useState([]);
 
   const {contract,sendTransaction} = useContract()
-  const { XrplWalletAddress, CreateToken } = useXRPLContext()
+  const { XrplWalletAddress, CreateToken,SendXRPfromLedgerToEVM } = useXRPLContext()
   const router = useRouter();
   //Storage API for images and videos
   const NFT_STORAGE_TOKEN =

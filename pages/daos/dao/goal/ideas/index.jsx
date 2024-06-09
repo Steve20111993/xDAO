@@ -268,7 +268,7 @@ export default function GrantIdeas() {
 
 		let messLatestId = Number(await contract._message_ids().call());
 		let newComment = {
-			address: window.ethereum.selectedAddress.toString(),
+			address: window.selectedAddress.toString(),
 			message: Comment,
 			date: new Date().toISOString(),
 			id: messLatestId
@@ -289,7 +289,7 @@ export default function GrantIdeas() {
 		let newReply = {
 			id: replyLatestId,
 			message: replyText,
-			address: window.ethereum.selectedAddress.toString(),
+			address: window.selectedAddress.toString(),
 			date: new Date().toISOString()
 		};
 		CommentsList[MessageIndex].replies.push(newReply);

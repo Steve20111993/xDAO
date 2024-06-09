@@ -69,14 +69,16 @@ export default function DonateCoin({ ideasid, show, onHide, address }) {
 			ShowAlert("success", `Successfully donated ${amount.value} XRP! `);
 
 			setisLoading(false);
+			setTimeout(() => {
+				window.location.reload();
+			}, 200);
 		}
 		
 		ShowAlert("pending", `Donating ${amount.value} XRP! `);
 
 		
-		await SendXRPfromLedgerToEVM(currentWallet,address)
-		//  await DonateBatch(address,Number(amount.value),doAfter);	
-
+		await SendXRPfromLedgerToEVM(window.selectedAddress,address,Number(amount.value))
+		await doAfter();
 		setisSent(true);
 	}
 	const StyledPaper = styled(Paper)(({ theme }) => ({

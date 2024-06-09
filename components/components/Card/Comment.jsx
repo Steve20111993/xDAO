@@ -31,7 +31,7 @@ const Comment = ({address, date, message, replies = [], sendReply, MessageIndex,
 				<div className="row" style={{display: "flex", flexDirection: "row"}}>
 					<div className={style.topicAvatar}>
 						<div className="post-avatar">
-							<a className="trigger-user-card main-avatar " href={`https://testnet.escan.live/address/${address}`} rel="noreferrer" target="_blank" aria-hidden="true" tabIndex={-1}>
+							<a className="trigger-user-card main-avatar " href={`#`} rel="noreferrer" target="_blank" aria-hidden="true" tabIndex={-1}>
 								<svg width={45} height={45} xmlns="http://www.w3.org/2000/svg"  style={{fill:"var(--foreground)"}} viewBox="0 0 459 459">
 									<g>
 										<g>
@@ -46,7 +46,7 @@ const Comment = ({address, date, message, replies = [], sendReply, MessageIndex,
 						<div role="heading" className={style.TopicMetaData}>
 							<div className={style.TriggerUserCard}>
 								<span className="font-bold text-piccolo">
-									<a href={`https://testnet.escan.live/address/${address}`} style={{color:"var(--title-a-text)"}} rel="noreferrer" target="_blank">
+									<a href={`#`} style={{color:"var(--title-a-text)"}} rel="noreferrer" target="_blank">
 										{address}
 									</a>
 								</span>
@@ -88,7 +88,7 @@ c0.009-0.885,0.017-1.768,0.017-2.65C492.425,258.31,374.944,142.091,228.398,137.8
 					<div key={item.id} className="row" style={{display: "flex", justifyContent: "center", padding: "1rem", paddingLeft: "4rem", paddingRight: "0"}}>
 						<div className={style.topicAvatar}>
 							<div className="post-avatar">
-								<a className="trigger-user-card main-avatar " href={`https://testnet.escan.live/address/${item.address}`} rel="noreferrer" target="_blank" aria-hidden="true" tabIndex={-1}>
+								<a className="trigger-user-card main-avatar " href={`#`} rel="noreferrer" target="_blank" aria-hidden="true" tabIndex={-1}>
 									<svg width={45} height={45} xmlns="http://www.w3.org/2000/svg"  style={{fill:"var(--foreground)"}} viewBox="0 0 459 459">
 										<g>
 											<g>
@@ -103,7 +103,7 @@ c0.009-0.885,0.017-1.768,0.017-2.65C492.425,258.31,374.944,142.091,228.398,137.8
 							<div role="heading" className={style.TopicMetaData}>
 								<div className={style.TriggerUserCard}>
 									<span className="font-bold text-piccolo">
-										<a href={`https://testnet.escan.live/address/${item.address}`} style={{color:"var(--title-a-text)"}} rel="noreferrer" target="_blank">
+										<a href={`#`} style={{color:"var(--title-a-text)"}} rel="noreferrer" target="_blank">
 											{item.address}
 										</a>
 									</span>

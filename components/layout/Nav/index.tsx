@@ -8,7 +8,7 @@ declare let window: any;
 let running = false;
 export function Nav(): JSX.Element {
 
-  const { XrplWalletAddress,BalanceXRPL,client,LogoutXummXrpl} = useXRPLContext();
+  const { XrplWalletAddress,BalanceXRPL,client} = useXRPLContext();
   const [acc, setAcc] = useState('');
   const [Balance, setBalance] = useState("");
   const [count, setCount] = useState(0);
@@ -102,9 +102,10 @@ export function Nav(): JSX.Element {
 
 
   async function onClickDisConnect() {
-   await LogoutXummXrpl()
+  
     window.localStorage.setItem("loggedin", "");
     window.localStorage.setItem("login-type", "");
+    window.localStorage.setItem("UserWallet", "");
     window.location.href = "/";
   }
 

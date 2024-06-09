@@ -8,7 +8,7 @@ export function Logo(): JSX.Element {
 
             <NavLink href="/">
                 <div style={{ "display": "flex" }}>
-                    <img className="NavImg" src="/favicon.svg" />
+                    <img className="NavImg"  src="/favicon.png" />
                 </div>
             </NavLink>
         </div>
