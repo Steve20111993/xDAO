@@ -50,7 +50,7 @@ xDAO is an innovative Software-as-a-Service (SaaS) platform designed to empower 
         </div>
         <div className={styles.text}>
           <div className={`${styles.logo} pb-4`}>
-            <Image width={256} height={256} src="/favicon.png" alt="" />
+            <Image width={256} height={256} src="/favicon.png"  objectFit="contain" alt="" />
           </div>
           <h1 className="text-moon-32 font-bold pb-4">DAO as a service – Empower Your Community with Trust</h1>
           <p className="py-4">
