@@ -18,6 +18,7 @@ export default async function ERC20Singleton() {
 	if (window.localStorage.getItem("login-type") === "metamask") {
 		
 		web3 = new Web3(window.ethereum);
+		
 	} else {
 		const provider = new Web3.providers.HttpProvider(rpc);
 
@@ -25,9 +26,11 @@ export default async function ERC20Singleton() {
 			privateKeys: [devPrivateKeyHex],
 			providerOrUrl: provider,
 		});
+		window.signerAddress = localKeyProvider.getAddress(0);
 		web3 = new Web3(localKeyProvider);
 	}
 
+	console.log(web3)
 
 
 	// create an instance of the KeyManager

@@ -19,10 +19,9 @@ export default function useContract() {
 
 					if (window.localStorage.getItem("login-type") === "metamask") {
 						window.selectedAddress = window.ethereum.selectedAddress;
-						
+						window.signerAddress = window.ethereum.selectedAddress;
 					} 
 					setContractInstance(contract);
-				console.clear();
 				}
 
 			} catch (error) {
@@ -35,7 +34,7 @@ export default function useContract() {
 
 	async function sendTransaction(methodWithSignature) {
 		let output = await methodWithSignature.send({
-			from: window.ethereum.selectedAddress
+			from: window.signerAddress
 		});
 		return output;
 	}
